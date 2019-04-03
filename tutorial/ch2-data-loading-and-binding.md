@@ -13,4 +13,4 @@ d3.select('body')
     .text(function(d) { return d; });
 ```
 
-![](./image/img2-1.png)
+![](../image/img2-1.png)
