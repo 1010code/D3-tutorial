@@ -29,4 +29,11 @@ var barChart = svg.selectAll("rect")
     });
 ```
 
+```css
+/* css */
+.bar-chart {
+  background-color: #C7D9D9;
+}
+```
+
 ![](../image/img3-1.png)
