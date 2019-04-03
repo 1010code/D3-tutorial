@@ -29,4 +29,4 @@ var barChart = svg.selectAll("rect")
     });
 ```
 
-![]('../image/img3-1.png)
+![](../image/img3-1.png)

@@ -30,7 +30,7 @@ var xAxis = d3.axisBottom(x)
   .ticks(5)                            // request 5 ticks on the x axis
 
 var yAxis = d3.axisLeft(y)                // y Axis
-  .ticks(4)
+  .ticks(5)
 
 var svg = d3.select("body").append("svg")
   .attr("width", outerWidth)
