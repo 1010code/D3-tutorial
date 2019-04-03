@@ -7,7 +7,7 @@ var width = outerWidth - margin.left - margin.right,       // width of plot insi
 
 document.body.style.margin = "0px"; // Eliminate default margin from <body> element
 
-var data = [{ x: .3, y: 0 }, { x: .4, y: 1 }, { x: .6, y: 1 },{ x: .7, y: 0 }];
+var data = [{ x: .3, y: 0 }, { x: .4, y: 1 }, { x: .6, y: 1 }, { x: .7, y: 0 }];
 var data2 = [{ x: .3, y: 0 }, { x: .36, y: .6 }, { x: .64, y: .6 }, { x: .7, y: 0 }];
 var data3 = [{ x: .36, y: 0 }, { x: .36, y: 1.2 }];
 
@@ -19,7 +19,7 @@ var x = d3.scaleLinear()                // interpolator for X axis -- inner plot
   .range([0, width]);
 
 var y = d3.scaleLinear()                // interpolator for Y axis -- inner plot region
-  .domain([0,1])
+  .domain([0, 1])
   .range([height, 0]);                  // remember, (0,0) is upper left -- this reverses "y"
 
 var line = d3.line()                     // SVG line generator
@@ -53,6 +53,18 @@ g.append("g")                            // render the X axis in the inner plot 
   .attr("transform", "translate(0," + height + ")")  // axis runs along lower part of graph
   .call(xAxis);
 
+
+g.append("path")                         // plot the data as a line
+  .datum(data2)
+  .attr("class", "line")
+  .attr("d", line)
+  .style('fill', '#fff')
+  .style('stroke', 'none')
+  .transition()
+  .delay(500)
+  .duration(1000)
+  .style('fill', '#f5eaea')
+
 g.append("path")                         // plot the data as a line
   .datum(data)
   .attr("class", "line")
@@ -62,18 +74,8 @@ g.append("path")                         // plot the data as a line
   .transition()
   .delay(500)
   .duration(1000)
- // .style('stroke', '#000')
+// .style('stroke', '#000')
 
-g.append("path")                         // plot the data as a line
-  .datum(data2)
-  .attr("class", "line")
-  .attr("d", line)
-  .style('fill', '#5656')
-  .style('stroke', 'none')
-  .transition()
-  .delay(500)
-  .duration(1000)
-  //.style('stroke', '#000')
 
 g.append("path")                         // plot the data as a line
   .datum(data3)
