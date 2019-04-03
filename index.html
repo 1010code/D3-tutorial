@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /* 13. Basic Styling with CSS */
+
+  /* Style the lines by removing the fill and applying a stroke */
+  .line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+  }
+
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+
+  /* Style the dots by assigning a fill and stroke */
+  .dot {
+    fill: #ffab00;
+    stroke: #fff;
+  }
+
+  .focus circle {
+    fill: none;
+    stroke: steelblue;
+  }
+  div.tooltip {	
+    position: absolute;			
+    width: 40px;					
+    height: 28px;					
+    padding: 6px;			
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+</style>
+<!-- Body tag is where we will append our SVG and SVG objects-->
+
+<body>
+</body>
+
+<!-- Load in the d3 library -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="./js/index.js"></script>
