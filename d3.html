@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Learn D3.js</title>
+</head>
+
+<body>
+
+  <ul></ul>
+
+  <script src='https://d3js.org/d3.v5.min.js'></script>
+
+  <script>
+    var fruits = ['星期一', '星期二', '星期三', '星期四'];
+      d3.select('ul')
+        .selectAll('li')
+        .data(fruits)
+        .enter()
+        .append('li')
+        .text(function (d) { return d; });
+  </script>
+</body>
+
+</html>
